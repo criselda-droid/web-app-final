@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+
+body, html {
+height: 125%;
+background-color: black;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Style the top navigation bar */
+.navbar {
+overflow: hidden; 
+background-color: #333; 
+}
+
+/* Style the navigation bar links */
+.navbar a {
+float: left; 
+display: block; 
+color: white; 
+text-align: center; 
+padding: 14px 20px; 
+text-decoration: none; 
+}
+
+/* Right-aligned link */
+.navbar a.right {
+float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+background-color: #ddd; 
+color: black; 
+}
+
+.header {
+padding: 80px; 
+text-align: center; 
+background: black; 
+color: white;
+}
+
+/* Increase the font size */
+.header h1 {
+font-size: 40px;
+
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h3{
+    font-family: Arial;
+}
+/* The hero image */
+.hero-image {
+
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("new-background.png");
+
+
+height: 50%;
+
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+text-align: center;
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: black;
+font-size: larger;
+}
+button{
+color: white;
+background-color: black;
+border-radius: 12px;
+font-size: 15px;
+}
+
+/* Ensure proper sizing */
+* {
+box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+
+.side {
+flex: 30%;
+background-color: #f1f1f1; 
+padding: 20px; 
+}
+
+/*---- Main column ----*/
+.main {
+flex: 70%; 
+background-color: white; 
+padding: 20px; 
+}/*---- Responsive layout ----*/
+@media screen and (max-width: 700px) {
+.row {
+flex-direction: column;
+}
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.navbar a {
+float: none;
+width: 100%;
+}
+}
+/* profile content */
+/* .profile{
+    border-radius: 50%;
+    width: 50%;
+    align-items: center;
+   
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    gap: 10px;
+   
+   
+  }
+  
+  .grid-container > div {
+    text-align: end;
+    padding: 20px 0;
+    font-size: 25px;
+    color: whitesmoke;
+   
+  }
+  #content{
+      text-align: center;
+  }
+  .item4 img{
+    width: 100%;
+    border-radius: 12px;
+    height: 100%;
+   
+  }
+/* gallery content */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1em;
+    font-style: italic;
+}
+
+.container > div { 
+    background-color: pink;
+    height: 100%;
+    color: #333;
+
+}
+img{
+    width: 100%;
+}
+/* qoutes content */
+.qoutes-content{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1em;
+    font-style: italic; 
+    
+}
+.qoutes-content > div{
+    background-image: linear-gradient(rgb(34, 200, 237), pink);
+    height: 100%;
+    color: #333;
+    border-radius: 12px;
+}
+
+/* blog */
+.blog-content{
+    background-image: linear-gradient(grey, pink);
+    color: black;
+}
+
+/* friends */
+
+.friends-container{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1em;
+    font-style: italic; 
+}
+.friends-container > div{
+    background-image: linear-gradient(rgb(34, 200, 237), pink);
+    height: 100%;
+    color: #333;
+    border-radius: 12px;
+}
+.friends-container img{
+    border-radius: 50%;
+}
